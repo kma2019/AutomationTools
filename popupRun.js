@@ -1,13 +1,23 @@
-// Copyright (c) 2014 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+$("#settings").click( function() {
+
+	
+});
+
+
+$("#submit").click( function() {
+
+	alert("Your changes have been saved.");	
+});
+
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
 
 /**
  * Get the current URL.
  *
  * @param {function(string)} callback - called when the URL of the current tab
  *   is found.
- */
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
   // https://developer.chrome.com/extensions/tabs#method-query
@@ -53,7 +63,7 @@ function getCurrentTabUrl(callback) {
  *   been found. The callback gets the URL, width and height of the image.
  * @param {function(string)} errorCallback - Called when the image is not found.
  *   The callback gets a string that describes the failure reason.
- */
+ 
 function getImageUrl(searchTerm, callback, errorCallback) {
   // Google image search - 100 searches per day.
   // https://developers.google.com/image-search/
@@ -116,3 +126,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+**/
