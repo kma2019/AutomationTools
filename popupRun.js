@@ -18,6 +18,6 @@ $(document).ready( function() {
 			document.getElementById("test").innerHTML = "text";
 		}
 		
-		
+		window.alert("Your changes have been saved");
 	});
 });
