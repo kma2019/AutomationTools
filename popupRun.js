@@ -9,15 +9,29 @@ $(document).ready( function() {
 	$("#submit").click( function() {
 	
 		if(document.getElementById("email").checked) {
-	
-			document.getElementById("test").innerHTML = "email";
+			
+			var a = "a";
+			var b = "b";
+			
+			localStorage.setItem(a, b);
+			console.log(localStorage[a]);
 		}
 	
 		if(document.getElementById("text").checked) {
 	
-			document.getElementById("test").innerHTML = "text";
+			
 		}
 		
-		window.alert("Your changes have been saved");
+		document.getElementById("test").innerHTML = "-";
+		pausecomp(300);
+		document.getElementById("test").innerHTML = "Your changes have been saved";
 	});
 });
+
+function pausecomp(millis)
+{
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+}
